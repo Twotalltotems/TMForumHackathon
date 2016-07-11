@@ -19,10 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupUIAppearance()
         
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
-        
         showMainUI()
-
         window?.makeKeyAndVisible()
+        
+        // Setup Google map
+        GMSServices.provideAPIKey("AIzaSyC_YhrejjR-B8_qnWU6pEZ2n6hjREE-Oj0")
 
         return true
     }

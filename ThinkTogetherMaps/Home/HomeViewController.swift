@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupMap()
     }
     
     private func setupNavigationBar() {
@@ -24,6 +25,20 @@ class HomeViewController: UIViewController {
         
         let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Organize, target: self, action: #selector(HomeViewController.settingsAction(_:)))
         navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    private func setupMap() {
+        let camera = GMSCameraPosition.cameraWithLatitude(-33.86,
+                                                          longitude: 151.20, zoom: 6)
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+        mapView.myLocationEnabled = true
+        self.view = mapView
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
+        marker.title = "Sydney"
+        marker.snippet = "Australia"
+        marker.map = mapView
     }
     
     func searchAction(sender: UIButton) {

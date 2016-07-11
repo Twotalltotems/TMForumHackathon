@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		560D98A21D345BEE0087479E /* ThinkTogetherMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThinkTogetherMaps-Bridging-Header.h"; sourceTree = "<group>"; };
 		5659D6E11D344AF7000995A1 /* ThinkTogetherMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkTogetherMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5659D6E41D344AF7000995A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5659D6EB1D344AF7000995A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 				5659D6EB1D344AF7000995A1 /* Assets.xcassets */,
 				5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */,
 				5659D6F01D344AF7000995A1 /* Info.plist */,
+				560D98A21D345BEE0087479E /* ThinkTogetherMaps-Bridging-Header.h */,
 			);
 			path = ThinkTogetherMaps;
 			sourceTree = "<group>";
@@ -327,10 +329,13 @@
 			baseConfigurationReference = A7B29AB9B06764E9E99FF7FA /* Pods-ThinkTogetherMaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ThinkTogetherMaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tmforum.ThinkTogetherMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThinkTogetherMaps/ThinkTogetherMaps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -339,10 +344,12 @@
 			baseConfigurationReference = 5FB020BFB5A20724DE1A39E2 /* Pods-ThinkTogetherMaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ThinkTogetherMaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tmforum.ThinkTogetherMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThinkTogetherMaps/ThinkTogetherMaps-Bridging-Header.h";
 			};
 			name = Release;
 		};
