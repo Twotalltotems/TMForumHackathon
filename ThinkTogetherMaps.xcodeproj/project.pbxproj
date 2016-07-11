@@ -12,6 +12,7 @@
 		5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */; };
 		5659D6F91D344C08000995A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6F71D344C08000995A1 /* Main.storyboard */; };
 		5659D6FA1D344C08000995A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659D6F81D344C08000995A1 /* HomeViewController.swift */; };
+		DC813EA299EED4D6E531DDA7 /* Pods_ThinkTogetherMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		5659D6F01D344AF7000995A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5659D6F71D344C08000995A1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5659D6F81D344C08000995A1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5FB020BFB5A20724DE1A39E2 /* Pods-ThinkTogetherMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkTogetherMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps.release.xcconfig"; sourceTree = "<group>"; };
+		6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThinkTogetherMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B29AB9B06764E9E99FF7FA /* Pods-ThinkTogetherMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkTogetherMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC813EA299EED4D6E531DDA7 /* Pods_ThinkTogetherMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				5659D6E31D344AF7000995A1 /* ThinkTogetherMaps */,
 				5659D6E21D344AF7000995A1 /* Products */,
+				F8E61793DE1DF2F03C445F6D /* Pods */,
+				901874D8BB0D23181403856C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +79,23 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		901874D8BB0D23181403856C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8E61793DE1DF2F03C445F6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7B29AB9B06764E9E99FF7FA /* Pods-ThinkTogetherMaps.debug.xcconfig */,
+				5FB020BFB5A20724DE1A39E2 /* Pods-ThinkTogetherMaps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5659D6F31D344AF7000995A1 /* Build configuration list for PBXNativeTarget "ThinkTogetherMaps" */;
 			buildPhases = (
+				F74ABC1F6A7ABC6623037942 /* [CP] Check Pods Manifest.lock */,
 				5659D6DD1D344AF7000995A1 /* Sources */,
 				5659D6DE1D344AF7000995A1 /* Frameworks */,
 				5659D6DF1D344AF7000995A1 /* Resources */,
+				2551417D9EFB7B5EB49A6FAB /* [CP] Embed Pods Frameworks */,
+				A02852CDC4A84E3AEA832E86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +164,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2551417D9EFB7B5EB49A6FAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A02852CDC4A84E3AEA832E86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F74ABC1F6A7ABC6623037942 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5659D6DD1D344AF7000995A1 /* Sources */ = {
@@ -249,6 +324,7 @@
 		};
 		5659D6F41D344AF7000995A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7B29AB9B06764E9E99FF7FA /* Pods-ThinkTogetherMaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ThinkTogetherMaps/Info.plist;
@@ -260,6 +336,7 @@
 		};
 		5659D6F51D344AF7000995A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB020BFB5A20724DE1A39E2 /* Pods-ThinkTogetherMaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ThinkTogetherMaps/Info.plist;
