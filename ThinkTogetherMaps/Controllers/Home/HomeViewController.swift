@@ -18,6 +18,10 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
         super.viewDidLoad()
         setupNavigationBar()
         setupMap()
+        
+        //Just for test:
+        NetworkClient.getSharedInstance().getSenserData()
+        
     }
     
     private func setupNavigationBar() {
