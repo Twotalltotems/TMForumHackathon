@@ -14,6 +14,8 @@ class MongOHViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.tableFooterView = UIView()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
