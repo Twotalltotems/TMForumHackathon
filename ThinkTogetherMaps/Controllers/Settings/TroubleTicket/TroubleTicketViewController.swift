@@ -43,11 +43,26 @@ extension TroubleTicketViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("TroubleTicketCell")!
+        
+        let severity = tickets[indexPath.row].severity
+        if severity == "High" {
+            cell.imageView?.image = UIImage(named: "flag_Red")
+        } else if severity == "Low" {
+            cell.imageView?.image = UIImage(named: "flag_Yellow")
+        } else {
+            cell.imageView?.image = UIImage(named: "flag_Grey")
+        }
+        cell.imageView?.contentMode = .ScaleAspectFit
         cell.textLabel?.text = tickets[indexPath.row].description
-        cell.detailTextLabel?.text = tickets[indexPath.row].severity
         cell.selectionStyle = .None
+        
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 70.0
     }
 }
 
