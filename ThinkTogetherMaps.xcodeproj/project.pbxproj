@@ -13,6 +13,8 @@
 		560D98B71D348E550087479E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98B51D348E550087479E /* Main.storyboard */; };
 		560D98BA1D348EDA0087479E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98B91D348EDA0087479E /* Settings.storyboard */; };
 		560D98BE1D348F710087479E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98BD1D348F710087479E /* SettingsTableViewController.swift */; };
+		560D98C21D3495DC0087479E /* SearchLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98C11D3495DC0087479E /* SearchLocation.storyboard */; };
+		560D98C41D3495EE0087479E /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98C31D3495EE0087479E /* SearchLocationViewController.swift */; };
 		5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659D6E41D344AF7000995A1 /* AppDelegate.swift */; };
 		5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6EB1D344AF7000995A1 /* Assets.xcassets */; };
 		5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */; };
@@ -27,6 +29,8 @@
 		560D98B51D348E550087479E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		560D98B91D348EDA0087479E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		560D98BD1D348F710087479E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		560D98C11D3495DC0087479E /* SearchLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchLocation.storyboard; sourceTree = "<group>"; };
+		560D98C31D3495EE0087479E /* SearchLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
 		5659D6E11D344AF7000995A1 /* ThinkTogetherMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkTogetherMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5659D6E41D344AF7000995A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5659D6EB1D344AF7000995A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				560D98B31D348E550087479E /* Home */,
+				560D98C01D3491DC0087479E /* SearchLocation */,
 				560D98B81D348ECD0087479E /* Settings */,
 			);
 			path = Controllers;
@@ -83,6 +88,15 @@
 				560D98BD1D348F710087479E /* SettingsTableViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		560D98C01D3491DC0087479E /* SearchLocation */ = {
+			isa = PBXGroup;
+			children = (
+				560D98C11D3495DC0087479E /* SearchLocation.storyboard */,
+				560D98C31D3495EE0087479E /* SearchLocationViewController.swift */,
+			);
+			path = SearchLocation;
 			sourceTree = "<group>";
 		};
 		5659D6D81D344AF7000995A1 = {
@@ -199,6 +213,7 @@
 				5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */,
 				5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */,
 				560D98BA1D348EDA0087479E /* Settings.storyboard in Resources */,
+				560D98C21D3495DC0087479E /* SearchLocation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +275,7 @@
 				5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */,
 				560D98BE1D348F710087479E /* SettingsTableViewController.swift in Sources */,
 				560D98A91D346B500087479E /* UIView+ThinkTogetherMaps.swift in Sources */,
+				560D98C41D3495EE0087479E /* SearchLocationViewController.swift in Sources */,
 				560D98A71D3464980087479E /* UIView+Inspectables.swift in Sources */,
 				560D98B61D348E550087479E /* HomeViewController.swift in Sources */,
 			);
