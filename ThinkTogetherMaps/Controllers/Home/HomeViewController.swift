@@ -92,5 +92,18 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
 extension HomeViewController: SearchLocationViewControllerDelegate {
     
     func searchLocation(location: String) {
+        NetworkClient.getSharedInstance().searchLocation(location, success: { region in
+            if let region = region {
+                
+                let center = region.center
+                let camera = GMSCameraPosition.cameraWithTarget(center, zoom: 12.0)
+                self.mainView.animateToCameraPosition(camera)
+                
+                let marker = GMSMarker(position: center)
+                marker.map = self.mainView
+            }
+        }) { error in
+            print(error)
+        }
     }
 }
