@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		560D98A71D3464980087479E /* UIView+Inspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98A61D3464980087479E /* UIView+Inspectables.swift */; };
-		560D98A91D346B500087479E /* UIView+ThinkTogetherMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98A81D346B500087479E /* UIView+ThinkTogetherMaps.swift */; };
 		560D98B61D348E550087479E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98B41D348E550087479E /* HomeViewController.swift */; };
 		560D98B71D348E550087479E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98B51D348E550087479E /* Main.storyboard */; };
 		560D98BA1D348EDA0087479E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98B91D348EDA0087479E /* Settings.storyboard */; };
@@ -27,6 +25,8 @@
 		5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659D6E41D344AF7000995A1 /* AppDelegate.swift */; };
 		5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6EB1D344AF7000995A1 /* Assets.xcassets */; };
 		5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */; };
+		569605BF1D35B053005DAB4B /* UIView+Inspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569605BD1D35B053005DAB4B /* UIView+Inspectables.swift */; };
+		569605C01D35B053005DAB4B /* UIView+ThinkTogetherMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569605BE1D35B053005DAB4B /* UIView+ThinkTogetherMaps.swift */; };
 		7E01DA9E1D34A9AF00D2F653 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E01DA9C1D34A9AF00D2F653 /* SettingsTableViewCell.swift */; };
 		7E01DA9F1D34A9AF00D2F653 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E01DA9D1D34A9AF00D2F653 /* SettingsTableViewCell.xib */; };
 		7E01DAA11D34AAA600D2F653 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E01DAA01D34AAA600D2F653 /* UIColor+CustomColors.swift */; };
@@ -42,8 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		560D98A61D3464980087479E /* UIView+Inspectables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspectables.swift"; sourceTree = "<group>"; };
-		560D98A81D346B500087479E /* UIView+ThinkTogetherMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ThinkTogetherMaps.swift"; sourceTree = "<group>"; };
 		560D98B41D348E550087479E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		560D98B51D348E550087479E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		560D98B91D348EDA0087479E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -64,6 +62,8 @@
 		5659D6EB1D344AF7000995A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5659D6EE1D344AF7000995A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5659D6F01D344AF7000995A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		569605BD1D35B053005DAB4B /* UIView+Inspectables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspectables.swift"; sourceTree = "<group>"; };
+		569605BE1D35B053005DAB4B /* UIView+ThinkTogetherMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ThinkTogetherMaps.swift"; sourceTree = "<group>"; };
 		5FB020BFB5A20724DE1A39E2 /* Pods-ThinkTogetherMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkTogetherMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps.release.xcconfig"; sourceTree = "<group>"; };
 		6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThinkTogetherMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E01DA9C1D34A9AF00D2F653 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,15 +93,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		560D98A51D3464980087479E /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				560D98A61D3464980087479E /* UIView+Inspectables.swift */,
-				560D98A81D346B500087479E /* UIView+ThinkTogetherMaps.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		560D98B21D348E550087479E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +194,6 @@
 			children = (
 				7EFD949E1D34A22600ED9890 /* Model */,
 				560D98B21D348E550087479E /* Controllers */,
-				560D98A51D3464980087479E /* Helper */,
 				7EFD949B1D34A18000ED9890 /* Utility */,
 				5659D6E41D344AF7000995A1 /* AppDelegate.swift */,
 				5659D6EB1D344AF7000995A1 /* Assets.xcassets */,
@@ -220,6 +210,8 @@
 				7EFD949C1D34A18000ED9890 /* NetworkClient.swift */,
 				5611B37D1D3560960081D99F /* AuthClient.swift */,
 				7E01DAA01D34AAA600D2F653 /* UIColor+CustomColors.swift */,
+				569605BD1D35B053005DAB4B /* UIView+Inspectables.swift */,
+				569605BE1D35B053005DAB4B /* UIView+ThinkTogetherMaps.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -388,7 +380,6 @@
 				7E01DA9E1D34A9AF00D2F653 /* SettingsTableViewCell.swift in Sources */,
 				5611B37E1D3560960081D99F /* AuthClient.swift in Sources */,
 				5611B39B1D3590CE0081D99F /* HistoryViewController.swift in Sources */,
-				560D98A91D346B500087479E /* UIView+ThinkTogetherMaps.swift in Sources */,
 				7E0B48061D355112001F2A34 /* GeoGraphy.swift in Sources */,
 				560D98C41D3495EE0087479E /* SearchLocationViewController.swift in Sources */,
 				5611B3841D357E4F0081D99F /* TroubleTicketViewController.swift in Sources */,
@@ -398,9 +389,10 @@
 				7E0B480A1D3559AB001F2A34 /* Open511Cam.swift in Sources */,
 				7E01DAA11D34AAA600D2F653 /* UIColor+CustomColors.swift in Sources */,
 				7E0B480C1D357E58001F2A34 /* MongOHViewController.swift in Sources */,
-				560D98A71D3464980087479E /* UIView+Inspectables.swift in Sources */,
 				5611B37C1D35603C0081D99F /* User.swift in Sources */,
+				569605C01D35B053005DAB4B /* UIView+ThinkTogetherMaps.swift in Sources */,
 				7E0B48041D354DB1001F2A34 /* Open511Event.swift in Sources */,
+				569605BF1D35B053005DAB4B /* UIView+Inspectables.swift in Sources */,
 				7E0B48021D34C571001F2A34 /* TMAnnotation.swift in Sources */,
 				560D98B61D348E550087479E /* HomeViewController.swift in Sources */,
 				7EFD94A11D34A22600ED9890 /* SensorData.swift in Sources */,
