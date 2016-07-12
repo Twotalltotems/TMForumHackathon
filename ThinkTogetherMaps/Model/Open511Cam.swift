@@ -47,7 +47,7 @@ class Open511Cam: Mappable {
     }
     
     func shouldGenerateMarker() -> Bool {
-        let value = Int(arc4random())
-        return  value % 20 == 0
+        let value = Int(arc4random_uniform(20))
+        return  value < 1
     }
 }
