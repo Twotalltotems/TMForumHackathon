@@ -5,6 +5,7 @@ use_frameworks!
 
 def common_pods
     pod 'GoogleMaps', '~> 1.13'
+    pod 'Alamofire', '~> 3.4'
 end
 
 target 'ThinkTogetherMaps' do
