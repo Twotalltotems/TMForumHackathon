@@ -7,7 +7,8 @@ class LoginController {
   {
     header('Content-Type: application/json');
 
-    $aResult = CurlHelper::getTMAPI("partyManagement/v2/individual/33", false);
+    $aResult = CurlHelper::getTMAPI("rest/S-IcN8-IUGtV-/partyManagement/v2/individual/33", false, null,
+                                "MDc3N2Q5YzZkYjU3NGQzMzc2NjdjZWM2ZDQ0NjRkMDNkNjBjNzQ0NGM5ZDFkYTNkNTY6VjRjTkZmSlFSY2QwWVYyVjZTM05vZGREbWVXaWliUHJydFU4Wm9pczEwWEw1alpwWEc=");
 
     $return = array(
                   "id" => $aResult["id"],

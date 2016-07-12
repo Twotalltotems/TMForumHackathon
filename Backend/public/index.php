@@ -30,6 +30,7 @@ require __DIR__ . '/../src/helpers/helper_curl.php';
 require __DIR__ . '/../src/controllers/ctrl_main.php';
 require __DIR__ . '/../src/controllers/ctrl_login.php';
 require __DIR__ . '/../src/controllers/ctrl_poi.php';
+require __DIR__ . '/../src/controllers/ctrl_trouble.php';
 
 // Register routes
 require __DIR__ . '/../src/routes.php';

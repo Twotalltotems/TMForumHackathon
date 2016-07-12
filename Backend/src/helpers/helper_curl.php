@@ -3,17 +3,18 @@
 namespace TTM;
 
 class CurlHelper {
-  public function getTMAPI($url, $post)
+  public function getTMAPI($url, $post, $data, $auth)
   {
     $curl = curl_init();
 
     if ($post)
     {
         curl_setopt($curl, CURLOPT_POST, 1);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
     }
 
-    curl_setopt($curl, CURLOPT_URL, "http://192.176.47.48:27010/rest/S-IcN8-IUGtV-/" . $url);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Basic MDc3N2Q5YzZkYjU3NGQzMzc2NjdjZWM2ZDQ0NjRkMDNkNjBjNzQ0NGM5ZDFkYTNkNTY6VjRjTkZmSlFSY2QwWVYyVjZTM05vZGREbWVXaWliUHJydFU4Wm9pczEwWEw1alpwWEc=',
+    curl_setopt($curl, CURLOPT_URL, "http://192.176.47.48:27010/" . $url);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Basic ' . $auth, //ODhmMDhmN2ZhODhlMzFiMWUzZWQ4YzBiNmU2YWFlMGJlZTVjZmNmMzljZWU4MjY1ZTI6UmQ4bENCUndjZHN5Wlp0R29kZ3ZxWTE0VDhyckhSbFE2NWhDTUVWWTZIN1A5RmxNaHI=',
                                                  'Content-Type: application/json',
                                                  'Accept: application/json'));
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);

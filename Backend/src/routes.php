@@ -4,6 +4,8 @@
 $app->get('/', function ($request, $response, $args) { echo TTM\MainController::index($request, $response, $args); });
 $app->post('/login', function ($request, $response, $args) { echo TTM\LoginController::doLogin($request, $response, $args); });
 $app->get('/getpois', function ($request, $response, $args) { echo TTM\POIController::getPoIs($request, $response, $args); });
+$app->get('/trouble', function ($request, $response, $args) { echo TTM\TroubleController::get($request, $response, $args); });
+$app->post('/trouble', function ($request, $response, $args) { echo TTM\TroubleController::post($request, $response, $args); });
 
 /*function ($request, $response, $args) {
     // Sample log message
