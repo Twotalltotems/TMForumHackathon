@@ -80,12 +80,14 @@ class SensorData: Mappable {
     func setupMarker(mapView: GMSMapView) {
         let position = CLLocationCoordinate2DMake(49.288852, -123.120573)
         let marker = GMSMarker(position: position)
-        marker.title = self.toString()
+        marker.title = "Sierra Wireless MongOH"
+        marker.snippet = self.toString()
         let imageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         imageView.image = UIImage(named: "Box")
         marker.iconView = imageView
         marker.map = mapView
+        marker.userData = self
     }
     
 }

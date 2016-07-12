@@ -30,6 +30,8 @@
 		7E0B48041D354DB1001F2A34 /* Open511Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B48031D354DB1001F2A34 /* Open511Event.swift */; };
 		7E0B48061D355112001F2A34 /* GeoGraphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B48051D355112001F2A34 /* GeoGraphy.swift */; };
 		7E0B480A1D3559AB001F2A34 /* Open511Cam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B48091D3559AB001F2A34 /* Open511Cam.swift */; };
+		7E0B480C1D357E58001F2A34 /* MongOHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B480B1D357E58001F2A34 /* MongOHViewController.swift */; };
+		7E0B480E1D358BE6001F2A34 /* CameraImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B480D1D358BE6001F2A34 /* CameraImageViewController.swift */; };
 		7EFD949D1D34A18000ED9890 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD949C1D34A18000ED9890 /* NetworkClient.swift */; };
 		7EFD94A11D34A22600ED9890 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD949F1D34A22600ED9890 /* SensorData.swift */; };
 		DC813EA299EED4D6E531DDA7 /* Pods_ThinkTogetherMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */; };
@@ -63,6 +65,8 @@
 		7E0B48031D354DB1001F2A34 /* Open511Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Open511Event.swift; sourceTree = "<group>"; };
 		7E0B48051D355112001F2A34 /* GeoGraphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoGraphy.swift; sourceTree = "<group>"; };
 		7E0B48091D3559AB001F2A34 /* Open511Cam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Open511Cam.swift; sourceTree = "<group>"; };
+		7E0B480B1D357E58001F2A34 /* MongOHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MongOHViewController.swift; sourceTree = "<group>"; };
+		7E0B480D1D358BE6001F2A34 /* CameraImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraImageViewController.swift; sourceTree = "<group>"; };
 		7EBCA4A51D34A2DB00FAB818 /* ThinkTogetherMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThinkTogetherMaps-Bridging-Header.h"; sourceTree = "<group>"; };
 		7EFD949C1D34A18000ED9890 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		7EFD949F1D34A22600ED9890 /* SensorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			children = (
 				560D98B51D348E550087479E /* Main.storyboard */,
 				560D98B41D348E550087479E /* HomeViewController.swift */,
+				7E0B480B1D357E58001F2A34 /* MongOHViewController.swift */,
+				7E0B480D1D358BE6001F2A34 /* CameraImageViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -357,8 +363,10 @@
 				7E0B48061D355112001F2A34 /* GeoGraphy.swift in Sources */,
 				560D98C41D3495EE0087479E /* SearchLocationViewController.swift in Sources */,
 				7EFD949D1D34A18000ED9890 /* NetworkClient.swift in Sources */,
+				7E0B480E1D358BE6001F2A34 /* CameraImageViewController.swift in Sources */,
 				7E0B480A1D3559AB001F2A34 /* Open511Cam.swift in Sources */,
 				7E01DAA11D34AAA600D2F653 /* UIColor+CustomColors.swift in Sources */,
+				7E0B480C1D357E58001F2A34 /* MongOHViewController.swift in Sources */,
 				560D98A71D3464980087479E /* UIView+Inspectables.swift in Sources */,
 				5611B37C1D35603C0081D99F /* User.swift in Sources */,
 				7E0B48041D354DB1001F2A34 /* Open511Event.swift in Sources */,

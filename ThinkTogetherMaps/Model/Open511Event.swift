@@ -30,7 +30,8 @@ class Open511Event: Mappable {
         if geoGraphy != nil && geoGraphy!.count == 2 {
             let position = CLLocationCoordinate2DMake(geoGraphy![1], geoGraphy![0])
             let marker = GMSMarker(position: position)
-            marker.title = description
+            marker.title = "Event"
+            marker.snippet = description
             let imageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
             imageView.contentMode = UIViewContentMode.ScaleAspectFit
             switch(eventType!) {
@@ -46,6 +47,7 @@ class Open511Event: Mappable {
             
             marker.iconView = imageView
             marker.map = mapView
+            marker.userData = self
         }
     }
 }

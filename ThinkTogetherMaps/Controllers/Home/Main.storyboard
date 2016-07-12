@@ -66,5 +66,61 @@
             </objects>
             <point key="canvasLocation" x="305" y="315"/>
         </scene>
+        <!--Camera Image View Controller-->
+        <scene sceneID="dOa-4H-QnV">
+            <objects>
+                <viewController storyboardIdentifier="popover" id="QcN-1o-MJk" customClass="CameraImageViewController" customModule="ThinkTogetherMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d6k-ZK-N9W"/>
+                        <viewControllerLayoutGuide type="bottom" id="xBb-A5-EB4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ULW-dE-XzR">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sr6-PA-UkT">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="400"/>
+                    <connections>
+                        <outlet property="imageView" destination="sr6-PA-UkT" id="xEW-NC-72E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnw-tK-VHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="315"/>
+        </scene>
+        <!--Sierra Wireless MongOH-->
+        <scene sceneID="qww-aH-5cH">
+            <objects>
+                <tableViewController storyboardIdentifier="MongOH" title="Sierra Wireless MongOH" id="eff-0e-5jI" customClass="MongOHViewController" customModule="ThinkTogetherMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pv4-7E-8NP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Taf-wp-iAf">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Taf-wp-iAf" id="Tlt-pq-MXt">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eff-0e-5jI" id="1pQ-nE-nOG"/>
+                            <outlet property="delegate" destination="eff-0e-5jI" id="MHg-GO-31k"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IcZ-t3-dTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="315"/>
+        </scene>
     </scenes>
 </document>

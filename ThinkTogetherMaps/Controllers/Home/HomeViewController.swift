@@ -26,9 +26,7 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
         setupMap()
         
         let timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(fetchdatafromSensor), userInfo: nil, repeats: true)
-        
-        
-        
+
         NetworkClient.getSharedInstance().getOpen511Events(success: {[weak self] (events, cams) -> Void in
             if let strongSelf = self {
                 strongSelf.events = events
@@ -42,6 +40,8 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
                 NSLog(String(events.count))
             }
         }) {}
+        
+        mainView.delegate = self
         
     }
     
@@ -69,7 +69,7 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
     
     private func setupNavigationBar() {
         
-        title = "Main Screen"
+        title = "Home"
         
         let leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(HomeViewController.searchAction(_:)))
         navigationItem.leftBarButtonItem = leftBarButtonItem
@@ -142,15 +142,23 @@ extension HomeViewController: SearchLocationViewControllerDelegate {
     }
 }
 
-//extension GMSMapViewDelegate: {
-//
-//    func mapView(mapView: GMSMapView, idleAtCameraPosition position: GMSCameraPosition) {
-//        UIView.animateWithDuration(5.0, animations: { () -> Void in
-//            self.londonView.tintColor = UIColor.blueColor()
-//            }, completion: {(finished: Bool) -> Void in
-//                // Stop tracking view changes to allow CPU to idle.
-//                self.london.tracksViewChanges = false
-//        })
-//    }
-//
+extension HomeViewController: GMSMapViewDelegate {
+    func mapView(mapView: GMSMapView, didTapInfoWindowOfMarker marker: GMSMarker) {
+        if marker.userData is SensorData {
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           let vc = storyboard.instantiateViewControllerWithIdentifier("MongOH") as! MongOHViewController
+            vc.sensorData = sensorData
+           navigationController?.pushViewController( vc, animated: true)
+        }
+        
+        if marker.userData is Open511Cam {
+            let vc = (self.storyboard?.instantiateViewControllerWithIdentifier("popover")) as! CameraImageViewController
+            vc.camData = marker.userData as! Open511Cam
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+//extension HomeViewController: UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate {
+//    
 //}

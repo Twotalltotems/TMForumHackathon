@@ -23,7 +23,8 @@ class Open511Cam: Mappable {
     
     // Mappable
     func mapping(map: Map) {
-        imageURL <- map["headline"]
+        name <- map["name"]
+        imageURL <- map["image"]
         description <- map["description"]
         latitude <- map["latitude"]
         longitude <- map["longitude"]
@@ -34,12 +35,14 @@ class Open511Cam: Mappable {
         if shouldGenerateMarker() && latitude != nil && longitude != nil {
             let position = CLLocationCoordinate2DMake(latitude!, longitude!)
             let marker = GMSMarker(position: position)
-            marker.title = description
+            marker.title = "Camera"
+            marker.snippet = description
             let imageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
             imageView.contentMode = UIViewContentMode.ScaleAspectFit
             imageView.image = UIImage(named: "Camera")
             marker.iconView = imageView
             marker.map = mapView
+            marker.userData = self
         }
     }
     
