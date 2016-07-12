@@ -62,6 +62,32 @@ class SensorData: Mappable {
         temperature = Double(abbstractedStr)
     }
     
+    func toString() -> String {
+        if let dust = self.dust, humidity = self.humidity, luminosity = self.luminosity, noise = self.noise, oxygen = self.oxygen, temperature = self.temperature {
+            var str = "Dust: " + String(dust) + "\n"
+            str += "Humidity: " + String(humidity) + "\n"
+            str += "Luminosity: " + String(luminosity) + "\n"
+            str += "Noise: " + String(noise) + "\n"
+            str += "Oxygen: " + String(oxygen) + "\n"
+            str += "Temperature:" + String(temperature)
+            return str
+        }
+        else {
+            return ""
+        }
+    }
+    
+    func setupMarker(mapView: GMSMapView) {
+        let position = CLLocationCoordinate2DMake(49.288852, -123.120573)
+        let marker = GMSMarker(position: position)
+        marker.title = self.toString()
+        let imageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        imageView.image = UIImage(named: "Box")
+        marker.iconView = imageView
+        marker.map = mapView
+    }
+    
 }
 
 

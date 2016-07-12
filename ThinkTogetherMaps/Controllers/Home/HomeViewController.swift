@@ -14,19 +14,56 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
 
     var documentInteractionController: UIDocumentInteractionController!
 
+    var sensorData: SensorData?
+    var events: [Open511Event]?
+    var cams: [Open511Cam]?
+    var sensorMarker: GMSMarker?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
         setupMap()
         
-        //Just for test:
-        NetworkClient.getSharedInstance().getSenserData(success: {sensorData -> Void in
-            //sensorData is the data we need from server.
-            NSLog(String(sensorData.luminosity))
-        }) {
-            
-        }
+        let timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(fetchdatafromSensor), userInfo: nil, repeats: true)
+        
+        
+        
+        NetworkClient.getSharedInstance().getOpen511Events(success: {[weak self] (events, cams) -> Void in
+            if let strongSelf = self {
+                strongSelf.events = events
+                strongSelf.cams = cams
+                for event in events {
+                    event.setupMarker(strongSelf.mainView)
+                }
+                for cam in cams {
+                    cam.setupMarker(strongSelf.mainView)
+                }
+                NSLog(String(events.count))
+            }
+        }) {}
+        
+    }
+    
+    func fetchdatafromSensor() {
+        NetworkClient.getSharedInstance().getSenserData(success: {[weak self] sensorData -> Void in
+            if let strongSelf = self {
+                strongSelf.sensorData = sensorData
+                sensorData.setupMarker(strongSelf.mainView)
+                NSLog("Sensor data back: Noise -> " + String(sensorData.noise))
+            }
+        }) {}
+    
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
         
     }
     
@@ -42,16 +79,12 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
     }
     
     private func setupMap() {
-        let camera = GMSCameraPosition.cameraWithLatitude(-33.86,
-                                                          longitude: 151.20, zoom: 6)
+        let camera = GMSCameraPosition.cameraWithLatitude(49.288852,
+                                                          longitude: -123.120573, zoom: 8)
         mainView.animateToCameraPosition(camera)
         mainView.myLocationEnabled = true
         
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mainView
+        
     }
     
     func searchAction(sender: UIButton) {
@@ -108,3 +141,16 @@ extension HomeViewController: SearchLocationViewControllerDelegate {
         }
     }
 }
+
+//extension GMSMapViewDelegate: {
+//
+//    func mapView(mapView: GMSMapView, idleAtCameraPosition position: GMSCameraPosition) {
+//        UIView.animateWithDuration(5.0, animations: { () -> Void in
+//            self.londonView.tintColor = UIColor.blueColor()
+//            }, completion: {(finished: Bool) -> Void in
+//                // Stop tracking view changes to allow CPU to idle.
+//                self.london.tracksViewChanges = false
+//        })
+//    }
+//
+//}

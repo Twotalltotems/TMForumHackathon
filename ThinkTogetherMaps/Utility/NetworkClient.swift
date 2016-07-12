@@ -79,6 +79,31 @@ class NetworkClient {
             }
         }
     }
+    
+    func getOpen511Events(success successHandler:  ([Open511Event], [Open511Cam]) -> Void, failure failureHandler: (Void -> Void)) {
+        Alamofire.Manager.sharedInstance.session.configuration
+            .HTTPAdditionalHeaders?.updateValue("application/json",
+                                                forKey: "Accept")
+//       Alamofire.request(.GET, "http://api.open511.gov.bc.ca/events?bbox=-123.45,48.99,-122.45,49.49", parameters: nil)
+       Alamofire.request(.GET, "http://172.20.29.86:8080/getpois", parameters: nil)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    if let json = response.result.value as? [String: [AnyObject]] {
+                        let eventsData = json["events"]!
+                        let events =  eventsData.map({Mapper<Open511Event>().map($0)!})
+                        let camsData = json["cams"]!
+                        let cams = camsData.map({Mapper<Open511Cam>().map($0)!})
+                        successHandler(events, cams)
+                    }
+                    
+                    print("validation success")
+                case .Failure(let error):
+                    print(error)
+                }
+        }
+    }
 }
 
 
