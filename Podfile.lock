@@ -1,12 +1,15 @@
 PODS:
+  - Alamofire (3.4.1)
   - GoogleMaps (1.13.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
   - GoogleMaps (~> 1.13)
 
 SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
 
-PODFILE CHECKSUM: d7c972e8e03a87c9a85b3425cab5e646d66b5015
+PODFILE CHECKSUM: c1ad0f5735df9fc3d8ac675d9d031345db13f0b9
 
 COCOAPODS: 1.0.1
