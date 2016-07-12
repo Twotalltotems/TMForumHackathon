@@ -42,10 +42,15 @@ class SearchLocationViewController: UIViewController {
     private func clearSearchResultTableView() {
         searchResultTableView.hidden = true
         autocompleteSearchResults = [GMSAutocompletePrediction]()
+        searchResultTableView.reloadData()
     }
     
     func closeAction(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func searchAction(sender: UIButton) {
+        view.endEditing(true)        
     }
 }
 
@@ -57,17 +62,17 @@ extension SearchLocationViewController: UITextFieldDelegate {
         if let text = textField.text {
             NetworkClient.getSharedInstance().getAutocompleteResults(text) { (predications) in
                 
-                if let predications = predications where predications.count > 0 {
-                    self.searchResultTableView.hidden = false
-                    self.autocompleteSearchResults = predications
-                } else {
+                guard let predications = predications where predications.count > 0 else {
                     self.clearSearchResultTableView()
+                    return
                 }
+                
+                self.searchResultTableView.hidden = false
+                self.autocompleteSearchResults = predications
                 self.searchResultTableView.reloadData()
             }
         } else {
-            self.clearSearchResultTableView()
-            self.searchResultTableView.reloadData()
+            clearSearchResultTableView()
         }
     }
 }
@@ -88,6 +93,13 @@ extension SearchLocationViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension SearchLocationViewController: UITableViewDelegate {
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let locationText = autocompleteSearchResults[indexPath.row].attributedFullText
+        searchTextField.text = locationText.string
+        clearSearchResultTableView()
+    }
 }
