@@ -10,7 +10,7 @@ extension UIView {
     
     var screenshot: UIImage {
         
-        UIGraphicsBeginImageContext(bounds.size)
+        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 2.0)
         
         guard let context = UIGraphicsGetCurrentContext() else {
             return UIImage()
