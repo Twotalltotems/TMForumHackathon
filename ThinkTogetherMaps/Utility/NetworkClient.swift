@@ -11,6 +11,9 @@ import ObjectMapper
 import Alamofire
 
 class NetworkClient {
+    
+    let baseUrl = "http://172.20.29.86:8080"
+    
     private static let networkClient = NetworkClient()
     
     static func getSharedInstance() -> NetworkClient {
@@ -66,7 +69,7 @@ class NetworkClient {
     
     func login(username username: String, password: String, success: User? -> Void) {
         
-        Alamofire.request(.POST, "http://172.20.29.86:8080/login", encoding: .URL, headers: nil).responseJSON { (response) -> Void in
+        Alamofire.request(.POST, "\(baseUrl)/login", encoding: .URL, headers: nil).responseJSON { (response) -> Void in
             
             if let _ = response.result.error {
                 success(nil)
@@ -102,6 +105,21 @@ class NetworkClient {
                 case .Failure(let error):
                     print(error)
                 }
+        }
+    }
+    
+    func getTroubleTickets(success: [TroubleTicket]? -> Void) {
+        
+        Alamofire.request(.GET, "\(baseUrl)/trouble", encoding: .URL, headers: nil).responseJSON { (response) -> Void in
+            
+            if let _ = response.result.error {
+                success(nil)
+            }
+            
+            if let json = response.result.value as? [AnyObject] {
+                let results = json.map { Mapper<TroubleTicket>().map($0)! }
+                success(results)
+            }
         }
     }
 }

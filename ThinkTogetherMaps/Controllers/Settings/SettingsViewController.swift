@@ -21,6 +21,7 @@ class SettingsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerNib(UINib(nibName: "SettingsTableViewCell",  bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView.tableFooterView = UIView()
         
         logoutButton.layer.cornerRadius = CGFloat(5.0)
         logoutButton.layer.borderWidth = CGFloat(1.0)
@@ -30,8 +31,9 @@ class SettingsViewController: UIViewController {
 
 
 extension SettingsViewController: UITableViewDataSource {
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -46,10 +48,14 @@ extension SettingsViewController: UITableViewDataSource {
             cell.mImageView.image = UIImage(named: "History")
             break
         case 2:
+            cell.mLabel.text = "Trouble Ticket"
+            cell.mImageView.image = UIImage(named: "Ticket")
+            break
+        case 3:
             cell.mLabel.text = "Preferences"
             cell.mImageView.image = UIImage(named: "Preferences")
             break
-        case 3:
+        case 4:
             cell.mLabel.text = "Term of Use"
             cell.mImageView.image = UIImage(named: "Term of Use")
             break
@@ -64,7 +70,7 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(70)
+        return 70.0
     }
 }
 
@@ -77,10 +83,20 @@ extension SettingsViewController: UITableViewDelegate {
                 let vc = storyboard.instantiateViewControllerWithIdentifier("AccountId")
                 navigationController?.pushViewController(vc, animated: true)
             }
+        case 1:
+            if let storyboard = storyboard {
+                let vc = storyboard.instantiateViewControllerWithIdentifier("HistoryId")
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        case 2:
+            if let storyboard = storyboard {
+                if let vc = storyboard.instantiateViewControllerWithIdentifier("TroubleTicketId") as? TroubleTicketViewController {
+                    vc.config()
+                    navigationController?.pushViewController(vc, animated: true)
+                }
+            }
         default:
             break
         }
     }
 }
-
-

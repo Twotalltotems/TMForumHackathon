@@ -20,6 +20,10 @@
 		5611B37C1D35603C0081D99F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B37B1D35603C0081D99F /* User.swift */; };
 		5611B37E1D3560960081D99F /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B37D1D3560960081D99F /* AuthClient.swift */; };
 		5611B3811D3575F20081D99F /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B3801D3575F20081D99F /* AccountViewController.swift */; };
+		5611B3841D357E4F0081D99F /* TroubleTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B3831D357E4F0081D99F /* TroubleTicketViewController.swift */; };
+		5611B3961D3584EF0081D99F /* TroubleTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B3951D3584EF0081D99F /* TroubleTicket.swift */; };
+		5611B3981D358F930081D99F /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B3971D358F930081D99F /* History.swift */; };
+		5611B39B1D3590CE0081D99F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B39A1D3590CE0081D99F /* HistoryViewController.swift */; };
 		5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659D6E41D344AF7000995A1 /* AppDelegate.swift */; };
 		5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6EB1D344AF7000995A1 /* Assets.xcassets */; };
 		5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */; };
@@ -51,6 +55,10 @@
 		5611B37B1D35603C0081D99F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5611B37D1D3560960081D99F /* AuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		5611B3801D3575F20081D99F /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		5611B3831D357E4F0081D99F /* TroubleTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TroubleTicketViewController.swift; sourceTree = "<group>"; };
+		5611B3951D3584EF0081D99F /* TroubleTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TroubleTicket.swift; sourceTree = "<group>"; };
+		5611B3971D358F930081D99F /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		5611B39A1D3590CE0081D99F /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		5659D6E11D344AF7000995A1 /* ThinkTogetherMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkTogetherMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5659D6E41D344AF7000995A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5659D6EB1D344AF7000995A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +132,8 @@
 				7E01DA9C1D34A9AF00D2F653 /* SettingsTableViewCell.swift */,
 				7E01DA9D1D34A9AF00D2F653 /* SettingsTableViewCell.xib */,
 				5611B37F1D3575D40081D99F /* Account */,
+				5611B3991D3590950081D99F /* History */,
+				5611B3821D357E3A0081D99F /* TroubleTicket */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -152,6 +162,22 @@
 				5611B3801D3575F20081D99F /* AccountViewController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		5611B3821D357E3A0081D99F /* TroubleTicket */ = {
+			isa = PBXGroup;
+			children = (
+				5611B3831D357E4F0081D99F /* TroubleTicketViewController.swift */,
+			);
+			path = TroubleTicket;
+			sourceTree = "<group>";
+		};
+		5611B3991D3590950081D99F /* History */ = {
+			isa = PBXGroup;
+			children = (
+				5611B39A1D3590CE0081D99F /* HistoryViewController.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		5659D6D81D344AF7000995A1 = {
@@ -207,6 +233,8 @@
 				7E0B48031D354DB1001F2A34 /* Open511Event.swift */,
 				7E0B48051D355112001F2A34 /* GeoGraphy.swift */,
 				7E0B48091D3559AB001F2A34 /* Open511Cam.swift */,
+				5611B3951D3584EF0081D99F /* TroubleTicket.swift */,
+				5611B3971D358F930081D99F /* History.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,9 +387,12 @@
 				5611B3811D3575F20081D99F /* AccountViewController.swift in Sources */,
 				7E01DA9E1D34A9AF00D2F653 /* SettingsTableViewCell.swift in Sources */,
 				5611B37E1D3560960081D99F /* AuthClient.swift in Sources */,
+				5611B39B1D3590CE0081D99F /* HistoryViewController.swift in Sources */,
 				560D98A91D346B500087479E /* UIView+ThinkTogetherMaps.swift in Sources */,
 				7E0B48061D355112001F2A34 /* GeoGraphy.swift in Sources */,
 				560D98C41D3495EE0087479E /* SearchLocationViewController.swift in Sources */,
+				5611B3841D357E4F0081D99F /* TroubleTicketViewController.swift in Sources */,
+				5611B3981D358F930081D99F /* History.swift in Sources */,
 				7EFD949D1D34A18000ED9890 /* NetworkClient.swift in Sources */,
 				7E0B480E1D358BE6001F2A34 /* CameraImageViewController.swift in Sources */,
 				7E0B480A1D3559AB001F2A34 /* Open511Cam.swift in Sources */,
@@ -374,6 +405,7 @@
 				560D98B61D348E550087479E /* HomeViewController.swift in Sources */,
 				7EFD94A11D34A22600ED9890 /* SensorData.swift in Sources */,
 				5611B3781D355B420081D99F /* LoginViewController.swift in Sources */,
+				5611B3961D3584EF0081D99F /* TroubleTicket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
