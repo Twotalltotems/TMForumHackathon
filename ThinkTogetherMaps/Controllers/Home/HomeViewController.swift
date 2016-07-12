@@ -49,9 +49,15 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
     }
     
     func searchAction(sender: UIButton) {
+        if let vc = UIStoryboard(name: "SearchLocation", bundle: nil).instantiateInitialViewController() {
+            presentViewController(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+        }
     }
     
     func settingsAction(sender: UIButton) {
+        if let vc = UIStoryboard(name: "Settings", bundle: nil).instantiateInitialViewController() as? UITableViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func openIn(sender: UIButton) {
