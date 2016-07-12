@@ -29,7 +29,7 @@ class User: Mappable {
     var id: String!
     var auth: String!
     var givenName: String!
-    var lastname: String!
+    var lastName: String!
     
     required init?(_ map: Map) {
     }
@@ -42,6 +42,6 @@ class User: Mappable {
         id          <- map["id"]
         auth        <- map["auth"]
         givenName   <- map["givenName"]
-        lastname    <- map["lastname"]
+        lastName    <- map["lastName"]
     }
 }

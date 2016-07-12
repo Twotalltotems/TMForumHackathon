@@ -23,7 +23,7 @@ class AccountViewController: UIViewController {
         if let user = AuthClient.sharedManager.CurrentUser {
             emailLabel.text = "Welcome back, \(user.email)!"
             givenNameLabel.text = user.givenName
-            lastNameLabel.text = user.lastname
+            lastNameLabel.text = user.lastName
         }
     }
 }
