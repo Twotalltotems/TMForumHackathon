@@ -63,6 +63,22 @@ class NetworkClient {
             }
         }
     }
+    
+    func login(username username: String, password: String, success: User? -> Void) {
+        
+        Alamofire.request(.POST, "http://172.20.29.86:8080/login", encoding: .URL, headers: nil).responseJSON { (response) -> Void in
+            
+            if let _ = response.result.error {
+                success(nil)
+            }
+            
+            if let json = response.result.value {
+                let user = Mapper<User>().map(json)
+                user?.email = username
+                success(user)
+            }
+        }
+    }
 }
 
 

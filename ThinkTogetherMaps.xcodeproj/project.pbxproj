@@ -15,6 +15,10 @@
 		560D98BE1D348F710087479E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98BD1D348F710087479E /* SettingsViewController.swift */; };
 		560D98C21D3495DC0087479E /* SearchLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98C11D3495DC0087479E /* SearchLocation.storyboard */; };
 		560D98C41D3495EE0087479E /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98C31D3495EE0087479E /* SearchLocationViewController.swift */; };
+		5611B3781D355B420081D99F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B3771D355B420081D99F /* LoginViewController.swift */; };
+		5611B37A1D355B4E0081D99F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5611B3791D355B4E0081D99F /* Login.storyboard */; };
+		5611B37C1D35603C0081D99F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B37B1D35603C0081D99F /* User.swift */; };
+		5611B37E1D3560960081D99F /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611B37D1D3560960081D99F /* AuthClient.swift */; };
 		5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659D6E41D344AF7000995A1 /* AppDelegate.swift */; };
 		5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6EB1D344AF7000995A1 /* Assets.xcassets */; };
 		5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */; };
@@ -35,6 +39,10 @@
 		560D98BD1D348F710087479E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		560D98C11D3495DC0087479E /* SearchLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchLocation.storyboard; sourceTree = "<group>"; };
 		560D98C31D3495EE0087479E /* SearchLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
+		5611B3771D355B420081D99F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5611B3791D355B4E0081D99F /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		5611B37B1D35603C0081D99F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5611B37D1D3560960081D99F /* AuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		5659D6E11D344AF7000995A1 /* ThinkTogetherMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkTogetherMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5659D6E41D344AF7000995A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5659D6EB1D344AF7000995A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +83,7 @@
 		560D98B21D348E550087479E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5611B3761D355AEE0081D99F /* Login */,
 				560D98B31D348E550087479E /* Home */,
 				560D98C01D3491DC0087479E /* SearchLocation */,
 				560D98B81D348ECD0087479E /* Settings */,
@@ -109,6 +118,15 @@
 				560D98C31D3495EE0087479E /* SearchLocationViewController.swift */,
 			);
 			path = SearchLocation;
+			sourceTree = "<group>";
+		};
+		5611B3761D355AEE0081D99F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5611B3791D355B4E0081D99F /* Login.storyboard */,
+				5611B3771D355B420081D99F /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		5659D6D81D344AF7000995A1 = {
@@ -149,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				7EFD949C1D34A18000ED9890 /* NetworkClient.swift */,
+				5611B37D1D3560960081D99F /* AuthClient.swift */,
 				7E01DAA01D34AAA600D2F653 /* UIColor+CustomColors.swift */,
 			);
 			path = Utility;
@@ -158,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				7EFD949F1D34A22600ED9890 /* SensorData.swift */,
+				5611B37B1D35603C0081D99F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +262,7 @@
 			files = (
 				7E01DA9F1D34A9AF00D2F653 /* SettingsTableViewCell.xib in Resources */,
 				560D98B71D348E550087479E /* Main.storyboard in Resources */,
+				5611B37A1D355B4E0081D99F /* Login.storyboard in Resources */,
 				5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */,
 				5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */,
 				560D98BA1D348EDA0087479E /* Settings.storyboard in Resources */,
@@ -307,13 +328,16 @@
 				5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */,
 				560D98BE1D348F710087479E /* SettingsViewController.swift in Sources */,
 				7E01DA9E1D34A9AF00D2F653 /* SettingsTableViewCell.swift in Sources */,
+				5611B37E1D3560960081D99F /* AuthClient.swift in Sources */,
 				560D98A91D346B500087479E /* UIView+ThinkTogetherMaps.swift in Sources */,
 				560D98C41D3495EE0087479E /* SearchLocationViewController.swift in Sources */,
 				7EFD949D1D34A18000ED9890 /* NetworkClient.swift in Sources */,
 				7E01DAA11D34AAA600D2F653 /* UIColor+CustomColors.swift in Sources */,
 				560D98A71D3464980087479E /* UIView+Inspectables.swift in Sources */,
+				5611B37C1D35603C0081D99F /* User.swift in Sources */,
 				560D98B61D348E550087479E /* HomeViewController.swift in Sources */,
 				7EFD94A11D34A22600ED9890 /* SensorData.swift in Sources */,
+				5611B3781D355B420081D99F /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ThinkTogetherMaps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tmforum.ThinkTogetherMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -438,6 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ThinkTogetherMaps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tmforum.ThinkTogetherMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
