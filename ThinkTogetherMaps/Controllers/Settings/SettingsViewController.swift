@@ -56,7 +56,7 @@ extension SettingsViewController: UITableViewDataSource {
             cell.mImageView.image = UIImage(named: "Preferences")
             break
         case 4:
-            cell.mLabel.text = "Term of Use"
+            cell.mLabel.text = "Terms of Use"
             cell.mImageView.image = UIImage(named: "Term of Use")
             break
         default:

@@ -71,20 +71,17 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
         
         title = "Home"
         
-        let leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(HomeViewController.searchAction(_:)))
+        let leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Search"), style: .Plain, target: self, action: #selector(HomeViewController.searchAction(_:)))
         navigationItem.leftBarButtonItem = leftBarButtonItem
         
-        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Organize, target: self, action: #selector(HomeViewController.settingsAction(_:)))
+        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Menu"), style: .Plain, target: self, action: #selector(HomeViewController.settingsAction(_:)))
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
     private func setupMap() {
-        let camera = GMSCameraPosition.cameraWithLatitude(49.288852,
-                                                          longitude: -123.120573, zoom: 8)
+        let camera = GMSCameraPosition.cameraWithLatitude(49.288852, longitude: -123.120573, zoom: 8)
         mainView.animateToCameraPosition(camera)
         mainView.myLocationEnabled = true
-        
-        
     }
     
     func searchAction(sender: UIButton) {
