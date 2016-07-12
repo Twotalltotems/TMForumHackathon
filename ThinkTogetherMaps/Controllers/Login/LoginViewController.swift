@@ -17,7 +17,12 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Login"
+        
+        emailTextField.text = "Awesome hacker"
+        passwordTextField.text = "Awesome hacker"
     }
+    
+    
     
     @IBAction func loginAction(sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
