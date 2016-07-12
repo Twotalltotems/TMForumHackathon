@@ -48,6 +48,9 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
     }
     
     func settingsAction(sender: UIButton) {
+        if let vc = UIStoryboard(name: "Settings", bundle: nil).instantiateInitialViewController() as? UITableViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func openIn(sender: UIButton) {
