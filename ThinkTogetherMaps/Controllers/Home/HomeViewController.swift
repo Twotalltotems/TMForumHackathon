@@ -60,7 +60,7 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
     }
     
     func settingsAction(sender: UIButton) {
-        if let vc = UIStoryboard(name: "Settings", bundle: nil).instantiateInitialViewController() as? UITableViewController {
+        if let vc = UIStoryboard(name: "Settings", bundle: nil).instantiateInitialViewController() {
             navigationController?.pushViewController(vc, animated: true)
         }
     }

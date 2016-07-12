@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup Google map
         GMSServices.provideAPIKey("AIzaSyC_YhrejjR-B8_qnWU6pEZ2n6hjREE-Oj0")
 
+        // Customize bars
+        UINavigationBar.appearance().barTintColor = UIColor.TMOrangeColor
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        
         return true
     }
 
@@ -59,7 +65,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     var mainController: UIViewController? = {
-        return UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!)
+        let nav = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!)
+        nav.navigationBar.barStyle = UIBarStyle.BlackOpaque
+        return nav
     }()
 }
 
