@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		560D98A71D3464980087479E /* UIView+Inspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98A61D3464980087479E /* UIView+Inspectables.swift */; };
 		560D98A91D346B500087479E /* UIView+ThinkTogetherMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98A81D346B500087479E /* UIView+ThinkTogetherMaps.swift */; };
+		560D98B61D348E550087479E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98B41D348E550087479E /* HomeViewController.swift */; };
+		560D98B71D348E550087479E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98B51D348E550087479E /* Main.storyboard */; };
+		560D98BA1D348EDA0087479E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98B91D348EDA0087479E /* Settings.storyboard */; };
 		5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659D6E41D344AF7000995A1 /* AppDelegate.swift */; };
 		5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6EB1D344AF7000995A1 /* Assets.xcassets */; };
 		5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */; };
-		5659D6F91D344C08000995A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6F71D344C08000995A1 /* Main.storyboard */; };
-		5659D6FA1D344C08000995A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659D6F81D344C08000995A1 /* HomeViewController.swift */; };
-		7EFD94901D348F2600ED9890 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD948F1D348F2600ED9890 /* NetworkClient.swift */; };
 		DC813EA299EED4D6E531DDA7 /* Pods_ThinkTogetherMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,16 +22,16 @@
 		560D98A21D345BEE0087479E /* ThinkTogetherMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThinkTogetherMaps-Bridging-Header.h"; sourceTree = "<group>"; };
 		560D98A61D3464980087479E /* UIView+Inspectables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspectables.swift"; sourceTree = "<group>"; };
 		560D98A81D346B500087479E /* UIView+ThinkTogetherMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ThinkTogetherMaps.swift"; sourceTree = "<group>"; };
+		560D98B41D348E550087479E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		560D98B51D348E550087479E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		560D98B91D348EDA0087479E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		5659D6E11D344AF7000995A1 /* ThinkTogetherMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkTogetherMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5659D6E41D344AF7000995A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5659D6EB1D344AF7000995A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5659D6EE1D344AF7000995A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5659D6F01D344AF7000995A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5659D6F71D344C08000995A1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		5659D6F81D344C08000995A1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5FB020BFB5A20724DE1A39E2 /* Pods-ThinkTogetherMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkTogetherMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps.release.xcconfig"; sourceTree = "<group>"; };
 		6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThinkTogetherMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EFD948F1D348F2600ED9890 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = Utility/NetworkClient.swift; sourceTree = "<group>"; };
 		A7B29AB9B06764E9E99FF7FA /* Pods-ThinkTogetherMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkTogetherMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +56,32 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		560D98B21D348E550087479E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				560D98B31D348E550087479E /* Home */,
+				560D98B81D348ECD0087479E /* Settings */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		560D98B31D348E550087479E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				560D98B41D348E550087479E /* HomeViewController.swift */,
+				560D98B51D348E550087479E /* Main.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		560D98B81D348ECD0087479E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				560D98B91D348EDA0087479E /* Settings.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		5659D6D81D344AF7000995A1 = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +103,7 @@
 		5659D6E31D344AF7000995A1 /* ThinkTogetherMaps */ = {
 			isa = PBXGroup;
 			children = (
-				7EFD948E1D348E9400ED9890 /* View */,
-				7EFD948D1D348E7400ED9890 /* Network */,
-				5659D6F61D344C08000995A1 /* Home */,
+				560D98B21D348E550087479E /* Controllers */,
 				560D98A51D3464980087479E /* Helper */,
 				5659D6E41D344AF7000995A1 /* AppDelegate.swift */,
 				5659D6EB1D344AF7000995A1 /* Assets.xcassets */,
@@ -88,30 +112,6 @@
 				560D98A21D345BEE0087479E /* ThinkTogetherMaps-Bridging-Header.h */,
 			);
 			path = ThinkTogetherMaps;
-			sourceTree = "<group>";
-		};
-		5659D6F61D344C08000995A1 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				5659D6F71D344C08000995A1 /* Main.storyboard */,
-				5659D6F81D344C08000995A1 /* HomeViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		7EFD948D1D348E7400ED9890 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				7EFD948F1D348F2600ED9890 /* NetworkClient.swift */,
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
-		7EFD948E1D348E9400ED9890 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		901874D8BB0D23181403856C /* Frameworks */ = {
@@ -192,9 +192,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560D98B71D348E550087479E /* Main.storyboard in Resources */,
 				5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */,
 				5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */,
-				5659D6F91D344C08000995A1 /* Main.storyboard in Resources */,
+				560D98BA1D348EDA0087479E /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,11 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5659D6FA1D344C08000995A1 /* HomeViewController.swift in Sources */,
-				7EFD94901D348F2600ED9890 /* NetworkClient.swift in Sources */,
 				5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */,
 				560D98A91D346B500087479E /* UIView+ThinkTogetherMaps.swift in Sources */,
 				560D98A71D3464980087479E /* UIView+Inspectables.swift in Sources */,
+				560D98B61D348E550087479E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
