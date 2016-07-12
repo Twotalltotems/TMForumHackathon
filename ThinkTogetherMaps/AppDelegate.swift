@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup Google map
         GMSServices.provideAPIKey("AIzaSyC_YhrejjR-B8_qnWU6pEZ2n6hjREE-Oj0")
 
+        application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+
         return true
     }
 
@@ -51,15 +53,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupUIAppearance() {
-        
+        UINavigationBar.appearance().barTintColor = UIColor.TMOrangeColor
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
     
     func showMainUI() {
-        window?.rootViewController = mainController
+        if AuthClient.sharedManager.isCurrentUserLoggedIn() {
+            window?.rootViewController = mainController
+        } else {
+            window?.rootViewController = loginController
+        }
     }
     
     var mainController: UIViewController? = {
-        return UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!)
+        let nav = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!)
+        nav.navigationBar.barStyle = UIBarStyle.BlackOpaque
+        return nav
+    }()
+    
+    var loginController: UIViewController? = {
+        let nav = UINavigationController(rootViewController: UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()!)
+        nav.navigationBar.barStyle = UIBarStyle.BlackOpaque
+        return nav
     }()
 }
 
