@@ -8,7 +8,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIDocumentInteractionControllerDelegate {
+
+    @IBOutlet weak var mainView: GMSMapView!
+
+    var documentInteractionController: UIDocumentInteractionController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,21 +34,41 @@ class HomeViewController: UIViewController {
     private func setupMap() {
         let camera = GMSCameraPosition.cameraWithLatitude(-33.86,
                                                           longitude: 151.20, zoom: 6)
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-        mapView.myLocationEnabled = true
-        self.view = mapView
+        mainView.animateToCameraPosition(camera)
+        mainView.myLocationEnabled = true
         
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
         marker.title = "Sydney"
         marker.snippet = "Australia"
-        marker.map = mapView
+        marker.map = mainView
     }
     
     func searchAction(sender: UIButton) {
     }
     
     func settingsAction(sender: UIButton) {
+    }
+    
+    @IBAction func openIn(sender: UIButton) {
+
+        let image = mainView.screenshot
+        
+        if let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first {
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = .LongStyle
+            let dateString = dateFormatter.stringFromDate(NSDate())
+            
+            let fileURL = documentsURL.URLByAppendingPathComponent("screenshot-\(dateString).png")
+            if let pngImageData = UIImagePNGRepresentation(image) {
+                pngImageData.writeToURL(fileURL, atomically: false)
+            }
+            
+            documentInteractionController = UIDocumentInteractionController(URL: fileURL)
+            documentInteractionController.delegate = self
+            documentInteractionController.presentOptionsMenuFromRect(sender.frame, inView:view, animated:true)
+        }
     }
 }
 
