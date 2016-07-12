@@ -69,8 +69,17 @@ extension SettingsViewController: UITableViewDataSource {
 }
 
 extension SettingsViewController: UITableViewDelegate {
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        switch indexPath.row {
+        case 0:
+            if let storyboard = storyboard {
+                let vc = storyboard.instantiateViewControllerWithIdentifier("AccountId")
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        default:
+            break
+        }
     }
 }
 
