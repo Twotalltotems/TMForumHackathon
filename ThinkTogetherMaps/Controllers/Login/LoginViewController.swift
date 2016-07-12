@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
 
         title = "Login"
         
-        emailTextField.text = "Awesome hacker"
-        passwordTextField.text = "Awesome hacker"
+        emailTextField.text = "Awesomehacker"
+        passwordTextField.text = "Awesomehacker"
     }
     
     @IBAction func loginAction(sender: UIButton) {

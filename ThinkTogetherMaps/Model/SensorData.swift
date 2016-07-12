@@ -49,6 +49,7 @@ class SensorData: Mappable {
         startIndex = str.rangeOfString("sensors.arduino.noise")?.endIndex.advancedBy(2)
         endIndex = str.rangeOfString("sensors.arduino.noise")?.endIndex.advancedBy(5)
         abbstractedStr = str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)).stringByTrimmingCharactersInSet(NSCharacterSet.lowercaseLetterCharacterSet())
+        abbstractedStr = abbstractedStr.stringByReplacingOccurrencesOfString(",", withString: "")
         noise = Double(abbstractedStr)
 
         startIndex = str.rangeOfString("sensors.arduino.oxygen")?.endIndex.advancedBy(2)
