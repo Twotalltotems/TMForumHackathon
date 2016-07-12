@@ -19,6 +19,8 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
     var cams: [Open511Cam]?
     var sensorMarker: GMSMarker?
     
+    var isTicketSend = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,10 +52,18 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
             if let strongSelf = self {
                 strongSelf.sensorData = sensorData
                 sensorData.setupMarker(strongSelf.mainView)
+                if !strongSelf.isTicketSend && sensorData.noise > 300.0 {
+                    strongSelf.isTicketSend = true
+                    let ticket = TroubleTicket()
+                    ticket.description = "Loud sound detected in the ballroom!"
+                    ticket.severity = "Low"
+                    NetworkClient.getSharedInstance().postTroubleTickets(ticket)
+                }
+                
+                
                 NSLog("Sensor data back: Noise -> " + String(sensorData.noise))
             }
         }) {}
-    
     }
     
     
@@ -98,7 +108,6 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
     }
     
     @IBAction func openIn(sender: UIButton) {
-
         let image = mainView.screenshot
         
         if let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first {

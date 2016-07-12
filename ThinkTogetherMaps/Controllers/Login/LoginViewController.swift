@@ -22,8 +22,6 @@ class LoginViewController: UIViewController {
         passwordTextField.text = "Awesome hacker"
     }
     
-    
-    
     @IBAction func loginAction(sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             AuthClient.sharedManager.login(email, password: password, completion: { error in

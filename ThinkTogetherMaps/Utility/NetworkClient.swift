@@ -122,6 +122,21 @@ class NetworkClient {
             }
         }
     }
+    
+    func postTroubleTickets(ticket: TroubleTicket) {
+        let params = ["description": ticket.description, "severity": ticket.severity]
+        Alamofire.request(.POST, "\(baseUrl)/trouble", parameters: params, encoding: .JSON)
+            .responseJSON { (response) -> Void in
+                
+                if let error = response.result.error {
+                    print(error.description)
+                }
+                
+                if let json = response.result.value {
+                    print("hfhfh")
+                }
+        }
+    }
 }
 
 

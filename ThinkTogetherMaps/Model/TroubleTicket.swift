@@ -21,4 +21,9 @@ class TroubleTicket: Mappable {
         description     <- map["description"]
         severity        <- map["severity"]
     }
+    
+    init() {
+        description = ""
+        severity = ""
+    }
 }

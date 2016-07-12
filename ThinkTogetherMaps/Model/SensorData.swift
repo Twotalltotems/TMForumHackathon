@@ -47,7 +47,7 @@ class SensorData: Mappable {
         luminosity = Double(abbstractedStr)
         
         startIndex = str.rangeOfString("sensors.arduino.noise")?.endIndex.advancedBy(2)
-        endIndex = str.rangeOfString("sensors.arduino.noise")?.endIndex.advancedBy(4)
+        endIndex = str.rangeOfString("sensors.arduino.noise")?.endIndex.advancedBy(5)
         abbstractedStr = str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)).stringByTrimmingCharactersInSet(NSCharacterSet.lowercaseLetterCharacterSet())
         noise = Double(abbstractedStr)
 
