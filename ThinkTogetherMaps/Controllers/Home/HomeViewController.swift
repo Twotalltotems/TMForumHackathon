@@ -74,7 +74,8 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
         if let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first {
             
             let dateFormatter = NSDateFormatter()
-            dateFormatter.dateStyle = .LongStyle
+            dateFormatter.dateFormat = "yyyy-MM-dd-HH:mm"
+
             let dateString = dateFormatter.stringFromDate(NSDate())
             
             let fileURL = documentsURL.URLByAppendingPathComponent("screenshot-\(dateString).png")
