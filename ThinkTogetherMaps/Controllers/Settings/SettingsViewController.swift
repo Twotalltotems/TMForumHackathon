@@ -15,7 +15,9 @@ class SettingsViewController: UIViewController {
     let cellIdentifier = "cellIdentifier"
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Settings"
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerNib(UINib(nibName: "SettingsTableViewCell",  bundle: nil), forCellReuseIdentifier: cellIdentifier)
@@ -24,8 +26,6 @@ class SettingsViewController: UIViewController {
         logoutButton.layer.borderWidth = CGFloat(1.0)
         logoutButton.layer.borderColor = UIColor.TMOrangeColor.CGColor
     }
-
-
 }
 
 
