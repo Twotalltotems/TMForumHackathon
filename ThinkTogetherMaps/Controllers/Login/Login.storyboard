@@ -20,10 +20,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7l-0j-vG2">
                                 <rect key="frame" x="10" y="40" width="580" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6b-k4-nDV">
-                                        <rect key="frame" x="30" y="14.5" width="65" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6b-k4-nDV">
+                                        <rect key="frame" x="25" y="14.5" width="75" height="20.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="65" id="Q1W-bK-jsv"/>
+                                            <constraint firstAttribute="width" constant="75" id="Q1W-bK-jsv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -37,10 +37,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="KPf-QM-pEN" firstAttribute="leading" secondItem="U6b-k4-nDV" secondAttribute="trailing" constant="30" id="6qr-la-IFT"/>
+                                    <constraint firstItem="KPf-QM-pEN" firstAttribute="leading" secondItem="U6b-k4-nDV" secondAttribute="trailing" constant="25" id="6qr-la-IFT"/>
                                     <constraint firstItem="U6b-k4-nDV" firstAttribute="centerY" secondItem="O7l-0j-vG2" secondAttribute="centerY" id="F5B-oy-mVw"/>
                                     <constraint firstAttribute="trailing" secondItem="KPf-QM-pEN" secondAttribute="trailing" constant="10" id="FP0-7R-Ykx"/>
-                                    <constraint firstItem="U6b-k4-nDV" firstAttribute="leading" secondItem="O7l-0j-vG2" secondAttribute="leading" constant="30" id="HH0-sv-4dG"/>
+                                    <constraint firstItem="U6b-k4-nDV" firstAttribute="leading" secondItem="O7l-0j-vG2" secondAttribute="leading" constant="25" id="HH0-sv-4dG"/>
                                     <constraint firstItem="KPf-QM-pEN" firstAttribute="centerY" secondItem="O7l-0j-vG2" secondAttribute="centerY" id="JCe-x4-7Kx"/>
                                     <constraint firstAttribute="height" constant="50" id="cib-Pl-MEX"/>
                                 </constraints>
@@ -60,9 +60,9 @@
                                 <rect key="frame" x="10" y="110" width="580" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZd-7j-8vk">
-                                        <rect key="frame" x="30" y="14.5" width="65" height="20.5"/>
+                                        <rect key="frame" x="25" y="14.5" width="75" height="20.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="65" id="r7M-3z-ced"/>
+                                            <constraint firstAttribute="width" constant="75" id="r7M-3z-ced"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -76,8 +76,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="xfk-80-5gR" firstAttribute="leading" secondItem="bZd-7j-8vk" secondAttribute="trailing" constant="30" id="Dot-aq-xl7"/>
-                                    <constraint firstItem="bZd-7j-8vk" firstAttribute="leading" secondItem="msY-Vz-5sL" secondAttribute="leading" constant="30" id="VEj-b1-eBk"/>
+                                    <constraint firstItem="xfk-80-5gR" firstAttribute="leading" secondItem="bZd-7j-8vk" secondAttribute="trailing" constant="25" id="Dot-aq-xl7"/>
+                                    <constraint firstItem="bZd-7j-8vk" firstAttribute="leading" secondItem="msY-Vz-5sL" secondAttribute="leading" constant="25" id="VEj-b1-eBk"/>
                                     <constraint firstItem="bZd-7j-8vk" firstAttribute="centerY" secondItem="msY-Vz-5sL" secondAttribute="centerY" id="Xgk-c5-cIu"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ieh-6x-VfH"/>
                                     <constraint firstAttribute="trailing" secondItem="xfk-80-5gR" secondAttribute="trailing" constant="10" id="rZx-uB-5Gt"/>
