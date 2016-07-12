@@ -21,7 +21,7 @@ class NetworkClient {
     
     private init() {}
     
-    func getSenserData(successHandler:  (SensorData) -> Void, failureHandler: (Void -> Void)) {
+    func getSenserData(success successHandler:  (SensorData) -> Void, failure failureHandler: (Void -> Void)) {
         Alamofire.request(.GET, "http://ttt-hackathon.mybluemix.net/sensor", parameters: nil)
             .validate()
             .responseJSON { response in
@@ -30,6 +30,7 @@ class NetworkClient {
                     if let json = response.result.value as? [[String: AnyObject]] {
                         let results = json.map { Mapper<SensorData>().map($0)!}
                         print(results.count)
+                        successHandler(results[results.endIndex-1])
                     }
                     
                     print("validation success")

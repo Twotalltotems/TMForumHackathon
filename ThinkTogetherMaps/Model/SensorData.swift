@@ -14,8 +14,11 @@ class SensorData: Mappable {
     var payload: String?
     var dust: Double?
     var humidity: Double?
-    var temperature: Double?
+    var luminosity: Double?
+    var noise: Double?
     var oxygen: Double?
+    var temperature: Double?
+    
     
     required init?(_ map: Map) {
     }
@@ -23,26 +26,40 @@ class SensorData: Mappable {
     // Mappable
     func mapping(map: Map) {
         payload <- map["payload"]
-//       parse(payload!)
+        parse(payload!)
 //        dust = payload?.substringToIndex(index: Index)
     }
     
     func parse(str: String) {
         var startIndex = str.rangeOfString("sensors.arduino.dust")?.endIndex.advancedBy(2)
         var endIndex = str.rangeOfString("sensors.arduino.dust")?.endIndex.advancedBy(8)
-        dust = Double(str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)))
+        var abbstractedStr = str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)).stringByTrimmingCharactersInSet(NSCharacterSet.lowercaseLetterCharacterSet())
+        dust = Double(abbstractedStr)
         
-        startIndex = str.rangeOfString("sensors.arduino.dust")?.endIndex.advancedBy(2)
-        endIndex = str.rangeOfString("sensors.arduino.dust")?.endIndex.advancedBy(8)
-        humidity = Double(str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)))
+        startIndex = str.rangeOfString("sensors.arduino.humidity")?.endIndex.advancedBy(2)
+        endIndex = str.rangeOfString("sensors.arduino.humidity")?.endIndex.advancedBy(8)
+        abbstractedStr = str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)).stringByTrimmingCharactersInSet(NSCharacterSet.lowercaseLetterCharacterSet())
+        humidity = Double(abbstractedStr)
         
-        startIndex = str.rangeOfString("sensors.arduino.dust")?.endIndex.advancedBy(2)
-        endIndex = str.rangeOfString("sensors.arduino.dust")?.endIndex.advancedBy(8)
-        dust = Double(str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)))
+        startIndex = str.rangeOfString("sensors.arduino.luminosity")?.endIndex.advancedBy(2)
+        endIndex = str.rangeOfString("sensors.arduino.luminosity")?.endIndex.advancedBy(4)
+        abbstractedStr = str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)).stringByTrimmingCharactersInSet(NSCharacterSet.lowercaseLetterCharacterSet())
+        luminosity = Double(abbstractedStr)
         
-        startIndex = str.rangeOfString("sensors.arduino.dust")?.endIndex.advancedBy(2)
-        endIndex = str.rangeOfString("sensors.arduino.dust")?.endIndex.advancedBy(8)
-        dust = Double(str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)))
+        startIndex = str.rangeOfString("sensors.arduino.noise")?.endIndex.advancedBy(2)
+        endIndex = str.rangeOfString("sensors.arduino.noise")?.endIndex.advancedBy(4)
+        abbstractedStr = str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)).stringByTrimmingCharactersInSet(NSCharacterSet.lowercaseLetterCharacterSet())
+        noise = Double(abbstractedStr)
+
+        startIndex = str.rangeOfString("sensors.arduino.oxygen")?.endIndex.advancedBy(2)
+        endIndex = str.rangeOfString("sensors.arduino.oxygen")?.endIndex.advancedBy(8)
+        abbstractedStr = str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)).stringByTrimmingCharactersInSet(NSCharacterSet.lowercaseLetterCharacterSet())
+        oxygen = Double(abbstractedStr)
+        
+        startIndex = str.rangeOfString("sensors.arduino.temperature")?.endIndex.advancedBy(2)
+        endIndex = str.rangeOfString("sensors.arduino.temperature")?.endIndex.advancedBy(8)
+        abbstractedStr = str.substringWithRange(Range<String.Index>(start: startIndex!, end: endIndex!)).stringByTrimmingCharactersInSet(NSCharacterSet.lowercaseLetterCharacterSet())
+        temperature = Double(abbstractedStr)
     }
     
 }

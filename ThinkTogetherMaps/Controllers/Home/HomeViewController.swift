@@ -20,7 +20,12 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
         setupMap()
         
         //Just for test:
-//        NetworkClient.getSharedInstance().getSenserData()
+        NetworkClient.getSharedInstance().getSenserData(success: {sensorData -> Void in
+            //sensorData is the data we need from server.
+            NSLog(String(sensorData.luminosity))
+        }) {
+            
+        }
         
     }
     
