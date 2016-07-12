@@ -62,7 +62,7 @@ extension TroubleTicketViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 70.0
+        return 75.0
     }
 }
 
