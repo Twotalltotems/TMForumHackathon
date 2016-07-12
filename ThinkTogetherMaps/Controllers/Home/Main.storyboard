@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="ThinkTogetherMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cg6-hL-avT" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQh-dN-fNX">
+                                <rect key="frame" x="525" y="525" width="60" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCd-Gj-1L1">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="openIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66Z-aP-dCr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="nCd-Gj-1L1" firstAttribute="leading" secondItem="KQh-dN-fNX" secondAttribute="leading" id="DZW-dB-tgg"/>
+                                    <constraint firstAttribute="height" constant="60" id="UU0-7B-edt"/>
+                                    <constraint firstItem="nCd-Gj-1L1" firstAttribute="top" secondItem="KQh-dN-fNX" secondAttribute="top" id="hB0-T4-Tpk"/>
+                                    <constraint firstAttribute="bottom" secondItem="nCd-Gj-1L1" secondAttribute="bottom" id="hbG-Oy-0Jj"/>
+                                    <constraint firstAttribute="width" constant="60" id="kae-lK-Mf1"/>
+                                    <constraint firstAttribute="trailing" secondItem="nCd-Gj-1L1" secondAttribute="trailing" id="xK8-D5-4S4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KQh-dN-fNX" secondAttribute="trailing" constant="15" id="Jbx-ds-Dd0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cg6-hL-avT" secondAttribute="bottom" id="Lii-13-zD9"/>
+                            <constraint firstItem="cg6-hL-avT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="W9y-gB-fQf"/>
+                            <constraint firstAttribute="trailing" secondItem="cg6-hL-avT" secondAttribute="trailing" id="dKC-Sl-6fI"/>
+                            <constraint firstItem="cg6-hL-avT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gDt-y8-atK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KQh-dN-fNX" secondAttribute="bottom" constant="15" id="jE6-DW-jUR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainView" destination="cg6-hL-avT" id="RrM-Jl-pSP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="315"/>
+        </scene>
+    </scenes>
+</document>

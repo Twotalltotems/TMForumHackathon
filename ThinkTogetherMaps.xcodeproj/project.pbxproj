@@ -7,21 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560D98A71D3464980087479E /* UIView+Inspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98A61D3464980087479E /* UIView+Inspectables.swift */; };
+		560D98A91D346B500087479E /* UIView+ThinkTogetherMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98A81D346B500087479E /* UIView+ThinkTogetherMaps.swift */; };
+		560D98B61D348E550087479E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98B41D348E550087479E /* HomeViewController.swift */; };
+		560D98B71D348E550087479E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98B51D348E550087479E /* Main.storyboard */; };
+		560D98BA1D348EDA0087479E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560D98B91D348EDA0087479E /* Settings.storyboard */; };
+		560D98BE1D348F710087479E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D98BD1D348F710087479E /* SettingsTableViewController.swift */; };
 		5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659D6E41D344AF7000995A1 /* AppDelegate.swift */; };
-		5659D6E71D344AF7000995A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659D6E61D344AF7000995A1 /* ViewController.swift */; };
-		5659D6EA1D344AF7000995A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6E81D344AF7000995A1 /* Main.storyboard */; };
 		5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6EB1D344AF7000995A1 /* Assets.xcassets */; };
 		5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */; };
+		DC813EA299EED4D6E531DDA7 /* Pods_ThinkTogetherMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		560D98A21D345BEE0087479E /* ThinkTogetherMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThinkTogetherMaps-Bridging-Header.h"; sourceTree = "<group>"; };
+		560D98A61D3464980087479E /* UIView+Inspectables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspectables.swift"; sourceTree = "<group>"; };
+		560D98A81D346B500087479E /* UIView+ThinkTogetherMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ThinkTogetherMaps.swift"; sourceTree = "<group>"; };
+		560D98B41D348E550087479E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		560D98B51D348E550087479E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		560D98B91D348EDA0087479E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		560D98BD1D348F710087479E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5659D6E11D344AF7000995A1 /* ThinkTogetherMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkTogetherMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5659D6E41D344AF7000995A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5659D6E61D344AF7000995A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5659D6E91D344AF7000995A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5659D6EB1D344AF7000995A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5659D6EE1D344AF7000995A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5659D6F01D344AF7000995A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FB020BFB5A20724DE1A39E2 /* Pods-ThinkTogetherMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkTogetherMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps.release.xcconfig"; sourceTree = "<group>"; };
+		6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThinkTogetherMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B29AB9B06764E9E99FF7FA /* Pods-ThinkTogetherMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkTogetherMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +42,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC813EA299EED4D6E531DDA7 /* Pods_ThinkTogetherMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		560D98A51D3464980087479E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				560D98A61D3464980087479E /* UIView+Inspectables.swift */,
+				560D98A81D346B500087479E /* UIView+ThinkTogetherMaps.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		560D98B21D348E550087479E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				560D98B31D348E550087479E /* Home */,
+				560D98B81D348ECD0087479E /* Settings */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		560D98B31D348E550087479E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				560D98B51D348E550087479E /* Main.storyboard */,
+				560D98B41D348E550087479E /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		560D98B81D348ECD0087479E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				560D98B91D348EDA0087479E /* Settings.storyboard */,
+				560D98BD1D348F710087479E /* SettingsTableViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		5659D6D81D344AF7000995A1 = {
 			isa = PBXGroup;
 			children = (
 				5659D6E31D344AF7000995A1 /* ThinkTogetherMaps */,
 				5659D6E21D344AF7000995A1 /* Products */,
+				F8E61793DE1DF2F03C445F6D /* Pods */,
+				901874D8BB0D23181403856C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +106,32 @@
 		5659D6E31D344AF7000995A1 /* ThinkTogetherMaps */ = {
 			isa = PBXGroup;
 			children = (
+				560D98B21D348E550087479E /* Controllers */,
+				560D98A51D3464980087479E /* Helper */,
 				5659D6E41D344AF7000995A1 /* AppDelegate.swift */,
-				5659D6E61D344AF7000995A1 /* ViewController.swift */,
-				5659D6E81D344AF7000995A1 /* Main.storyboard */,
 				5659D6EB1D344AF7000995A1 /* Assets.xcassets */,
 				5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */,
 				5659D6F01D344AF7000995A1 /* Info.plist */,
+				560D98A21D345BEE0087479E /* ThinkTogetherMaps-Bridging-Header.h */,
 			);
 			path = ThinkTogetherMaps;
+			sourceTree = "<group>";
+		};
+		901874D8BB0D23181403856C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6475ED1196C8952394BC6BDA /* Pods_ThinkTogetherMaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8E61793DE1DF2F03C445F6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7B29AB9B06764E9E99FF7FA /* Pods-ThinkTogetherMaps.debug.xcconfig */,
+				5FB020BFB5A20724DE1A39E2 /* Pods-ThinkTogetherMaps.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5659D6F31D344AF7000995A1 /* Build configuration list for PBXNativeTarget "ThinkTogetherMaps" */;
 			buildPhases = (
+				F74ABC1F6A7ABC6623037942 /* [CP] Check Pods Manifest.lock */,
 				5659D6DD1D344AF7000995A1 /* Sources */,
 				5659D6DE1D344AF7000995A1 /* Frameworks */,
 				5659D6DF1D344AF7000995A1 /* Resources */,
+				2551417D9EFB7B5EB49A6FAB /* [CP] Embed Pods Frameworks */,
+				A02852CDC4A84E3AEA832E86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,35 +195,79 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560D98B71D348E550087479E /* Main.storyboard in Resources */,
 				5659D6EF1D344AF7000995A1 /* LaunchScreen.storyboard in Resources */,
 				5659D6EC1D344AF7000995A1 /* Assets.xcassets in Resources */,
-				5659D6EA1D344AF7000995A1 /* Main.storyboard in Resources */,
+				560D98BA1D348EDA0087479E /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2551417D9EFB7B5EB49A6FAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A02852CDC4A84E3AEA832E86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThinkTogetherMaps/Pods-ThinkTogetherMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F74ABC1F6A7ABC6623037942 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5659D6DD1D344AF7000995A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5659D6E71D344AF7000995A1 /* ViewController.swift in Sources */,
 				5659D6E51D344AF7000995A1 /* AppDelegate.swift in Sources */,
+				560D98BE1D348F710087479E /* SettingsTableViewController.swift in Sources */,
+				560D98A91D346B500087479E /* UIView+ThinkTogetherMaps.swift in Sources */,
+				560D98A71D3464980087479E /* UIView+Inspectables.swift in Sources */,
+				560D98B61D348E550087479E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5659D6E81D344AF7000995A1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5659D6E91D344AF7000995A1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5659D6ED1D344AF7000995A1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -249,23 +366,30 @@
 		};
 		5659D6F41D344AF7000995A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7B29AB9B06764E9E99FF7FA /* Pods-ThinkTogetherMaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ThinkTogetherMaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tmforum.ThinkTogetherMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThinkTogetherMaps/ThinkTogetherMaps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5659D6F51D344AF7000995A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB020BFB5A20724DE1A39E2 /* Pods-ThinkTogetherMaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ThinkTogetherMaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tmforum.ThinkTogetherMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThinkTogetherMaps/ThinkTogetherMaps-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -288,6 +412,7 @@
 				5659D6F51D344AF7000995A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
