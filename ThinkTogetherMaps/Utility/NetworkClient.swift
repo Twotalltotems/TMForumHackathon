@@ -8,9 +8,7 @@
 
 import Foundation
 import ObjectMapper
-
 import Alamofire
-
 
 class NetworkClient {
     private static let networkClient = NetworkClient()
@@ -37,6 +35,19 @@ class NetworkClient {
                 case .Failure(let error):
                     print(error)
                 }
+        }
+    }
+    
+    func getAutocompleteResults(queryString: String, success: ([GMSAutocompletePrediction]?) -> Void) {
+        
+        let placeClient = GMSPlacesClient.sharedClient()
+        
+        placeClient.autocompleteQuery(queryString, bounds: nil, filter: nil) { (predictions, error) in
+            if let _ = error {
+                success(nil)
+            } else {
+                success(predictions)
+            }
         }
     }
 }
