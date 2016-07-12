@@ -16,8 +16,11 @@ class SearchLocationViewController: UIViewController {
     
     var autocompleteSearchResults = [GMSAutocompletePrediction]()
     
+    var delegate: SearchLocationViewControllerDelegate! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupNavigationBar()
         setupView()
     }
@@ -50,7 +53,11 @@ class SearchLocationViewController: UIViewController {
     }
     
     @IBAction func searchAction(sender: UIButton) {
-        view.endEditing(true)        
+        view.endEditing(true)
+        if let text = searchTextField.text {
+            delegate.searchLocation(text)
+        }
+        closeAction(sender)
     }
 }
 
@@ -102,4 +109,10 @@ extension SearchLocationViewController: UITableViewDelegate {
         searchTextField.text = locationText.string
         clearSearchResultTableView()
     }
+}
+
+// MARK: - Protocol SearchLocationViewControllerDelegate
+
+protocol SearchLocationViewControllerDelegate {
+    func searchLocation(location: String)
 }

@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupNavigationBar()
         setupMap()
         
@@ -54,7 +55,8 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
     }
     
     func searchAction(sender: UIButton) {
-        if let vc = UIStoryboard(name: "SearchLocation", bundle: nil).instantiateInitialViewController() {
+        if let vc = UIStoryboard(name: "SearchLocation", bundle: nil).instantiateInitialViewController() as? SearchLocationViewController {
+            vc.delegate = self
             presentViewController(UINavigationController(rootViewController: vc), animated: true, completion: nil)
         }
     }
@@ -87,3 +89,8 @@ class HomeViewController: UIViewController, UIDocumentInteractionControllerDeleg
     }
 }
 
+extension HomeViewController: SearchLocationViewControllerDelegate {
+    
+    func searchLocation(location: String) {
+    }
+}

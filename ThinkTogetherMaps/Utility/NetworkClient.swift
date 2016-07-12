@@ -50,6 +50,19 @@ class NetworkClient {
             }
         }
     }
+    
+    func searchLocation(location: String, success: CLCircularRegion? -> Void, failure: NSError? -> Void) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(location) { (placemarks, error) in
+            if let placemarks = placemarks {
+                if let region = placemarks[0].region as! CLCircularRegion? {
+                    success(region)
+                }
+            } else {
+                failure(error)
+            }
+        }
+    }
 }
 
 
